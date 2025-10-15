@@ -1,7 +1,3 @@
-
--- Jalankan di SQL Editor Supabase Anda
-
--- 1) Enum status
 create type status_enum as enum ('Menunggu','Proses','Selesai','Diambil');
 
 -- 2) Tabel utama
@@ -37,6 +33,5 @@ execute function set_updated_at();
 -- 4) (Opsional) Row Level Security
 alter table public.wash_items enable row level security;
 
--- Kebijakan minimal (server akan pakai service role, jadi ini opsional)
 create policy "allow read for anon" on public.wash_items
 for select to anon using (true);
