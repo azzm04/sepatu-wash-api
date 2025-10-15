@@ -130,31 +130,14 @@ Base URL produksi (Vercel): `https://<YOUR-VERCEL-URL>`
    npm install
    npm run dev
    ```
-5. Cek: `GET http://localhost:3000/`
+5. Cek: `GET http://localhost:4000/`
 
 > **Keamanan**: `SUPABASE_SERVICE_ROLE` hanya untuk server. Saat deploy di Vercel, simpan di **Project Settings → Environment Variables** (tidak di-commit).
 
 ---
-
-## Deploy ke Vercel
-
-1. Push kode ke **GitHub**.
-2. Di **Vercel**, **New Project** → import repo GitHub Anda.
-3. Tambahkan Environment Variables di Vercel:
-   - `SUPABASE_URL`
-   - `SUPABASE_SERVICE_ROLE`
-4. Deploy. Vercel akan menggunakan `vercel.json` dan handler Express dari `index.js`.
-
-Jika sukses, Anda akan mendapatkan URL seperti:  
-`https://sepatu-wash-api-yourname.vercel.app/`
-
-Masukkan link itu ke bagian **Link Deploy** di bawah.
-
----
-
 ## Link Deploy (Vercel)
 
-- Production: `https://<ISI-SETELAH-DEPLOY>.vercel.app`
+- Production: `https://sepatu-wash-api.vercel.app/`
 
 ---
 
@@ -170,15 +153,6 @@ Masukkan link itu ke bagian **Link Deploy** di bawah.
 ├── supabase.sql
 └── README.md
 ```
-
----
-
-## Catatan RLS (opsional)
-
-Jika Anda mengaktifkan **Row Level Security** di Supabase dan ingin mengakses tabel dengan **anon key** dari klien publik, Anda perlu menulis **policies** yang aman. Dalam proyek ini, API server menggunakan **service role**, sehingga tidak memerlukan policies khusus selain read-only untuk anon (jika diinginkan).
-
----
-
 ## Lisensi
 
 MIT
